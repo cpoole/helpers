@@ -43,11 +43,13 @@ set shiftwidth=4	" n cols for auto-indenting
 set tabstop=4	" tabs appear as n columns
 set autoindent	" auto indents next line
 "set smartindent	" does something...
-"set list	" show all line endings
-"set listchars=tab:\|-,trail:-,extends:$,nbsp:=	" show tabs with vertical pipe
-let g:indent_guides_enable_on_vim_startup = 1
-hi IndentGuidesOdd  ctermbg=black
-hi IndentGuidesEven ctermbg=darkgrey
+set list	" show all line endings
+set listchars=tab:\|-,trail:-,extends:$,nbsp:=	" show tabs with vertical pipe
+hi SpecialKey ctermfg=8
+"let g:indent_guides_enable_on_vim_startup = 1
+"let g:indent_guides_auto_colors = 0
+"hi IndentGuidesOdd  ctermbg=238
+"hi IndentGuidesEven ctermbg=240
 
 
 set nowrap	" dont wrap lines
