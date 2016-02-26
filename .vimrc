@@ -2,7 +2,7 @@ set nocompatible
 filetype off
 syntax on
 
-set rtp+=~/.vim/bundle/vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
@@ -65,7 +65,8 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 set splitbelow	" place new files in adjacent window
 
-
+" allow saving a sudo file if I forgot to open in sudo
+cmap w!! w !sudo tee > /dev/null %
 " Save whenever switching windows or leaving vim. This is useful when running
 " the tests inside vim without having to save all files first.
 au FocusLost,WinLeave * :silent! wa
