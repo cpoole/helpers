@@ -39,8 +39,8 @@ set wildmenu	" show all autocomplete in popup menu
 "WHITESPACE
 "set expandtab	"spaces instead of tabs
 "set smarttab
-set shiftwidth=4	" n cols for auto-indenting
-set tabstop=4	" tabs appear as n columns
+set shiftwidth=2	" n cols for auto-indenting
+set tabstop=2	" tabs appear as n columns
 set autoindent	" auto indents next line
 "set smartindent	" does something...
 set list	" show all line endings
