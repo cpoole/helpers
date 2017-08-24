@@ -13,18 +13,25 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'guns/xterm-color-table.vim'
 
 call vundle#end()
 
 filetype plugin indent on
-
-colorscheme Monokai
 
 set nocompatible	"remove legacy support
 set ttyfast	" dont lag
 set cursorline	" track position
 set ruler	" track line and char pos
 set fileformat=unix	" show carriage return if it exists
+
+"COLORS
+colorscheme Monokai
+"set background=dark
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=237
 
 "SEARCH
 set ignorecase	" case insensitive search
@@ -35,7 +42,6 @@ set showmatch	" matching [] {} () <>
 
 set wildmenu	" show all autocomplete in popup menu
 "set clipboard+=unnamed	" yank and copy to X clipboard
-"set background=dark
 
 "WHITESPACE
 set autoindent	" auto indents next line
