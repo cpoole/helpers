@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
+Plugin 'tpope/vim-sleuth'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'flazz/vim-colorschemes'
@@ -37,12 +38,7 @@ set wildmenu	" show all autocomplete in popup menu
 "set background=dark
 
 "WHITESPACE
-"set expandtab	"spaces instead of tabs
-"set smarttab
-set shiftwidth=2	" n cols for auto-indenting
-set tabstop=2	" tabs appear as n columns
 set autoindent	" auto indents next line
-"set smartindent	" does something...
 set list	" show all line endings
 set listchars=tab:\|-,trail:-,extends:$,nbsp:=	" show tabs with vertical pipe
 hi SpecialKey ctermfg=8
