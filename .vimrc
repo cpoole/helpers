@@ -5,7 +5,7 @@ syntax on
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
-
+Plugin 'chrisbra/Recover.vim'
 Plugin 'tpope/vim-sleuth'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
@@ -16,6 +16,8 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'guns/xterm-color-table.vim'
 
 call vundle#end()
+
+let g:ycm_python_binary_path = 'python'
 
 filetype plugin indent on
 
@@ -48,11 +50,6 @@ set autoindent	" auto indents next line
 set list	" show all line endings
 set listchars=tab:\|-,trail:-,extends:$,nbsp:=	" show tabs with vertical pipe
 hi SpecialKey ctermfg=8
-"let g:indent_guides_enable_on_vim_startup = 1
-"let g:indent_guides_auto_colors = 0
-"hi IndentGuidesOdd  ctermbg=238
-"hi IndentGuidesEven ctermbg=240
-
 
 set nowrap	" dont wrap lines
 set linebreak	" attempt to wrap lines cleanly
@@ -77,3 +74,12 @@ au FocusLost,WinLeave * :silent! wa
 au FocusGained,BufEnter * :silent! !
 
 set equalalways
+
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()
