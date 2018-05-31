@@ -47,11 +47,15 @@ set wildmenu	" show all autocomplete in popup menu
 
 "WHITESPACE
 set autoindent	" auto indents next line
-set list	" show all line endings
-set listchars=tab:\|-,trail:-,extends:$,nbsp:=	" show tabs with vertical pipe
-hi SpecialKey ctermfg=8
-
-set nowrap	" dont wrap lines
+"set list	" show all line endings
+"set listchars=tab:\|-,trail:-,extends:$,nbsp:=	" show tabs with vertical pipe
+"hi ExtraWhitespace ctermfg=243
+"match ExtraWhitespace /\s\+$/
+"hi SpecialKey ctermfg=243
+"hi NonText ctermfg=243
+set shiftwidth=2
+set tabstop=2
+"set nowrap	" dont wrap lines
 set linebreak	" attempt to wrap lines cleanly
 set number	" display line numbers
 set spelllang=en_gb	" use real english spelling
